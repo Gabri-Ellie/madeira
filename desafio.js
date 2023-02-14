@@ -1,4 +1,4 @@
-const button =querySelector('button');
+const button = document.querySelector('button');
 button.addEventListener('click', () => {
         function Enviar(){
         var lado1= parseFloat(document.querySelector("#num1").value);
@@ -16,7 +16,6 @@ button.addEventListener('click', () => {
 }else{
     window.alert('Erro')
 } 
-
 S = (lado1+lado2+lado3)/2
 h = Math.sqrt(S*(S-lado1)*(S-lado2)*(S-base))* base/2
 d = Math.sqrt(Math.pow(h, 2) + Math.pow(lado1, 2))
@@ -27,6 +26,6 @@ e = Math.sqrt(Math.pow(h, 2) + Math.pow(lado2, 2))
     tri.style.borderLeftWidth = d;
     tri.style.borderRightWidth = e;
     tri.style.borderBottomWidth = h;
-}
 
+}
 })
