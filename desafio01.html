@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,36 @@
     <title>triangulo</title>
     <script src="desafio.js"></script>
     <style>
-
-        form{
+        form {
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             width: 30%;
             text-align: center;
         }
+
         .arrow-up {
-  width: 0; 
-  height: 0; 
-  border-left: 30px solid transparent ;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid black;
-}
+            width: 0;
+            height: 0;
+
+        }
     </style>
 </head>
-<body>
-    <h1>IDENTIFICADOR DE TRIÂNGULOS</h1>
-    <form id="formi">
-        <input type="number" placeholder="LADO ESQUERDO" id="num1">
-        <input type="number" placeholder="LADO DIREITO" id="num2">
-        <input type="number" placeholder="BASE" id="base">
-        <button onclick="Enviar()">IDENTIFICAR</button>
-    </form>
-    <div class="arrow-up">
 
+<body>
+    <div>
+        <h1>IDENTIFICADOR DE TRIÂNGULOS</h1>
+        <form>
+            <input type="number" placeholder="LADO ESQUERDO" id="num1">
+            <input type="number" placeholder="LADO DIREITO" id="num2">
+            <input type="number" placeholder="BASE/ LADO MAIOR" id="base">
+            <button type="button" onclick="enviar()">IDENTIFICAR</button>
+            <button type="button" onclick="limpar()">LIMPAR FORMULÁRIO</button>
+        </form>
+        <div class="arrow-up" style="width: 0%;">
+
+        </div>
     </div>
-    
 </body>
+
 </html>
