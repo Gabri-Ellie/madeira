@@ -1,17 +1,31 @@
-function enviar(event) {
-    //event.preventDefault();
-    var a = parseInt(document.querySelector("#num1").value);
-    var b = parseInt(document.querySelector("#num2").value);
-    var c = parseInt(document.querySelector("#base").value);
+function isEmpty(str) {
+
+    return (!str || str.length === 0);
+    
+} 
+
+function enviar() {
+
+    var a = parseInt(document.getElementById("num1").value);
+    var b = parseInt(document.getElementById("num2").value);
+    var c = parseInt(document.getElementById("base").value);
+
+    if (
+        isEmpty(a) ||
+        isEmpty(b) ||
+        isEmpty(c)
+    ) {
+        window.alert("insira valores válidos");
+        return;
+    }
     if ((a >= b + c) || (b >= a + c) || (c >= a + b)) {
         window.alert('não é um triângulo');
-    }
-    else if (a == b && b == c) {
+    } else if (a != b && b != c && a != c) {
+        window.alert('é um triângulo escaleno');
+    } else if (a == b && b == c && a != c) {
         window.alert('é um triângulo equilátero');
     } else if ((a == b && a != c) || (b == c && b != a) || (a == c && a != b)) {
         window.alert('é um triângulo isósceles');
-    } else if (a != b && b != c) {
-        window.alert('é um triângulo escaleno');
     } else {
         window.alert('Erro');
     }
@@ -30,10 +44,13 @@ function enviar(event) {
     tri.style.borderBottom = `${parseInt(h)}cm solid pink`;
 
 }
-function limpar(event) {
+function limpar() {
 
-    l1= document.getElementById("num1").value='';
-    l2= document.getElementById("num2").value='';
-    l3= document.getElementById("base").value='';
-
+    // l1 = window.confirm("tem certeza que deseja limpar?");
+    // if (!l1) {
+    //     return;
+    // }
+    document.getElementById("num1").value = '';
+    document.getElementById("num2").value = '';
+    document.getElementById("base").value = '';
 }

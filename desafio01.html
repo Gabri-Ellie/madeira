@@ -8,12 +8,17 @@
     <title>triangulo</title>
     <script src="desafio.js"></script>
     <style>
+
+        body{
+            background-color: rgb(228, 228, 228);
+        }
+
         form {
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             width: 30%;
             text-align: center;
+            margin: auto;
         }
 
         .arrow-up {
@@ -21,18 +26,52 @@
             height: 0;
 
         }
+        input{
+            border:1px solid;
+            border-radius: 100px;
+            padding: 1%;
+            margin: 1% 0%;
+            padding-left: 10px;
+        }
+        button{
+            border-radius: 100px;
+            background-color: rgb(255, 70, 132);
+            border: none;
+            padding: 3%;
+            margin: 2% 1%;
+            width: 300px;
+        }
+        .divi{
+            display: flex;
+            flex-direction: row;
+        }
+        .reset{
+            background-color: rgb(153, 29, 255);
+        }
+        .reset:hover{
+            cursor: pointer;
+        }
+        .mae{
+            text-align: center;
+            width: 100%;
+        }
+        .iden:hover{
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
-    <div>
+    <div class="mae">
         <h1>IDENTIFICADOR DE TRIÂNGULOS</h1>
         <form>
             <input type="number" placeholder="LADO ESQUERDO" id="num1">
             <input type="number" placeholder="LADO DIREITO" id="num2">
             <input type="number" placeholder="BASE/ LADO MAIOR" id="base">
-            <button type="button" onclick="enviar()">IDENTIFICAR</button>
-            <button type="button" onclick="limpar()">LIMPAR FORMULÁRIO</button>
+            <div class="divi">
+            <button type="button" onclick="enviar()" class="iden">IDENTIFICAR</button>
+            <button type="button" onclick="limpar()" class="reset">LIMPAR FORMULÁRIO</button>
+            </div>
         </form>
         <div class="arrow-up" style="width: 0%;">
 
