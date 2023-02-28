@@ -22,7 +22,7 @@ function enviar() {
         window.alert('não é um triângulo');
     } else if (a != b && b != c && a != c) {
         window.alert('é um triângulo escaleno');
-    } else if (a == b && b == c && a != c) {
+    } else if (a == b && b == c && a == c) {
         window.alert('é um triângulo equilátero');
     } else if ((a == b && a != c) || (b == c && b != a) || (a == c && a != b)) {
         window.alert('é um triângulo isósceles');
@@ -39,17 +39,13 @@ function enviar() {
     console.log(e);
 
     const tri = document.querySelector('.arrow-up');
-    tri.style.borderLeft = `${parseInt(d)}cm solid transparent`;
-    tri.style.borderRight = `${parseInt(e)}cm solid transparent`;
-    tri.style.borderBottom = `${parseInt(h)}cm solid pink`;
+    tri.style.borderLeft = `${parseFloat(d)}cm solid transparent`;
+    tri.style.borderRight = `${parseFloat(e)}cm solid transparent`;
+    tri.style.borderBottom = `${parseFloat(h)}cm solid darkblue`;
 
 }
 function limpar() {
 
-    // l1 = window.confirm("tem certeza que deseja limpar?");
-    // if (!l1) {
-    //     return;
-    // }
     document.getElementById("num1").value = '';
     document.getElementById("num2").value = '';
     document.getElementById("base").value = '';
