@@ -1,34 +1,38 @@
 function isEmpty(str) {
 
     return (!str || str.length === 0);
-    
-} 
+
+}
 
 function enviar() {
 
     var a = parseInt(document.getElementById("num1").value);
     var b = parseInt(document.getElementById("num2").value);
     var c = parseInt(document.getElementById("base").value);
+    var t = document.getElementById("texto");
 
     if (
         isEmpty(a) ||
         isEmpty(b) ||
         isEmpty(c)
     ) {
-        window.alert("insira valores válidos");
+        var te = document.createTextNode("insira valores válidos");
         return;
     }
     if ((a >= b + c) || (b >= a + c) || (c >= a + b)) {
-        window.alert('não é um triângulo');
+        var te = document.createTextNode('não é um triângulo');
     } else if (a != b && b != c && a != c) {
-        window.alert('é um triângulo escaleno');
+        var te = document.createTextNode('é um triângulo escaleno');
     } else if (a == b && b == c && a == c) {
-        window.alert('é um triângulo equilátero');
+        var te = document.createTextNode('é um triângulo equilátero');
     } else if ((a == b && a != c) || (b == c && b != a) || (a == c && a != b)) {
-        window.alert('é um triângulo isósceles');
+        var te = document.createTextNode('é um triângulo isósceles');
     } else {
-        window.alert('Erro');
+        var te = document.createTextNode('Erro');
     }
+
+    t.appendChild(te);
+
     s = (a + b + c) / 2;
     console.log(s);
     h = Math.sqrt(s * (s - a) * (s - b) * (s - c)) / (c / 2);
@@ -49,4 +53,8 @@ function limpar() {
     document.getElementById("num1").value = '';
     document.getElementById("num2").value = '';
     document.getElementById("base").value = '';
+
+    const tri = document.querySelector('.arrow-up');
+    tri.style.border = 'none';
+
 }
