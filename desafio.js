@@ -13,12 +13,10 @@ function isEmpty(str) {
 function hidequad() {
     document.getElementById("tra").style.display = "flex";
     document.getElementById("quad").style.display = "none";
-    document.getElementById("cat").style.display = "none";
 }
 function hidetrig() {
     document.getElementById("tra").style.display = "none";
     document.getElementById("quad").style.display = "flex";
-    document.getElementById("cat").style.display = "none";
 }
 
 
