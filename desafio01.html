@@ -7,27 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>triangulo</title>
     <link rel="stylesheet" href="desafio.css">
-    <script src="desafio.js"></script>
 
 </head>
 
 <body>
+    <header id="cab">
+        <button type="button" onclick="hidequad()" class="butao">TRIÂNGULOS</button>
+        <button type="button" onclick="hidetrig()" class="butao">QUADRADOS E RETÂNGULOS</button>
+    </header>
     <div class="mae">
-        <h1>IDENTIFICADOR DE TRIÂNGULOS</h1>
+    <div class="quadrado" id="quad">
+        <h1>QUADRADOS E RETÂNGULOS</h1>
+        <form>
+            <input type="number" placeholder="BASE" id="quadl1">
+            <input type="number" placeholder="ALTURA" id="quadl2">
+
+            <div class="divi">
+                <button type="button" onclick="quad()" class="iden">DESENHAR</button>
+                <button type="button" onclick="limpar()" class="reset">LIMPAR</button>
+            </div>
+        </form>
+        <p id="texto2"></p>
+        <div class="square">
+
+    </div>
+    <div class="triangulo" id="tra">
+        <h1>TRIÂNGULOS</h1>
         <form>
             <input type="number" placeholder="LADO ESQUERDO" id="num1">
             <input type="number" placeholder="LADO DIREITO" id="num2">
             <input type="number" placeholder="BASE/ LADO MAIOR" id="base">
             <div class="divi">
-                <button type="button" onclick="enviar()" class="iden">IDENTIFICAR</button>
+                <button type="button" onclick="trig()" class="iden">IDENTIFICAR</button>
                 <button type="button" onclick="limpar()" class="reset">LIMPAR</button>
             </div>
         </form>
-        <p id="texto"></p>
+        <p id="texto1"></p>
         <div class="arrow-up" style="width: 0%;">
 
         </div>
     </div>
+    </div>
+    <script src="desafio.js"></script>
 </body>
 
 </html>
